@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    // Redirect unknown paths back to index with the path stored in the URL hash
+    // so the SPA can handle routing client-side.
+    const path = window.location.pathname + window.location.search;
+    window.location.replace('/?route=' + encodeURIComponent(path));
+  </script>
+</head>
+<body></body>
+</html>
