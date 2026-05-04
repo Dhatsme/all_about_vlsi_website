@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All About VLSI</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; }
+
+    header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 { font-size: 1.4rem; color: #58a6ff; letter-spacing: 1px; }
+    nav a { color: #8b949e; text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+    nav a:hover { color: #58a6ff; }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
+    }
+    .hero h2 { font-size: 2.4rem; margin-bottom: 16px; }
+    .hero h2 span { color: #58a6ff; }
+    .hero p { color: #8b949e; font-size: 1.1rem; max-width: 560px; margin: 0 auto 32px; }
+    .hero button {
+      background: #238636;
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .hero button:hover { background: #2ea043; }
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 48px 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 24px;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .card:hover { border-color: #58a6ff; transform: translateY(-3px); }
+    .card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .card h3 { font-size: 1rem; margin-bottom: 6px; }
+    .card p { color: #8b949e; font-size: 0.85rem; line-height: 1.5; }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #484f58;
+      font-size: 0.8rem;
+      border-top: 1px solid #21262d;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>⚡ All About VLSI</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Topics</a>
+      <a href="#">Tools</a>
+      <a href="#">Blog</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Learn <span>VLSI Design</span> from Scratch</h2>
+    <p>From digital logic to chip tapeout — concise, practical resources for students and engineers.</p>
+    <button onclick="document.querySelector('.topics').scrollIntoView({behavior:'smooth'})">Explore Topics</button>
+  </div>
+
+  <div class="topics" id="topics">
+    <div class="card"><div class="icon">🔢</div><h3>Digital Design</h3><p>Logic gates, FSMs, timing, and HDL basics.</p></div>
+    <div class="card"><div class="icon">🔌</div><h3>CMOS Circuits</h3><p>Transistor-level design, sizing, and power analysis.</p></div>
+    <div class="card"><div class="icon">📐</div><h3>RTL Design</h3><p>Verilog / VHDL coding, synthesis, and simulation.</p></div>
+    <div class="card"><div class="icon">🗺️</div><h3>Physical Design</h3><p>Floorplan, placement, routing, and DRC/LVS.</p></div>
+    <div class="card"><div class="icon">🧪</div><h3>Verification</h3><p>UVM, formal, coverage, and assertion-based methods.</p></div>
+    <div class="card"><div class="icon">🛠️</div><h3>EDA Tools</h3><p>Synopsys, Cadence, and open-source tool guides.</p></div>
+  </div>
+
+  <footer>© 2025 All About VLSI · Built for learners everywhere</footer>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        const topic = card.querySelector('h3').textContent;
+        alert('Coming soon: ' + topic + ' — full tutorials, exercises, and examples!');
+      });
+    });
+  </script>
+
+</body>
+</html>
